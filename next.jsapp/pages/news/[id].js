@@ -1,9 +1,15 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const Newsdetail = () => {
+
+  const router = useRouter()
+
+  const route = router.query.id;
+
   return (
     <div>
-      <h1>This is News Detail</h1>
+      <h1>{route}</h1>
     </div>
   )
 }
